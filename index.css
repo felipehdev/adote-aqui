@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Cantarell:wght@400;700&family=Fredoka:wght@300;400;500&family=Lato:wght@100;400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Cantarell:wght@400;700&family=Fredoka:wght@300;400;500&family=Lato:wght@100;400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700;800&display=swap');
 
 * {
   margin: 0px;
@@ -50,6 +50,9 @@ body {
 
 /*evento*/
 .destac-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
   width: 100%;
   max-width: 900px;
@@ -57,6 +60,10 @@ body {
   margin: auto;
   margin-top: 0.8rem;
   border-radius: 6px;
+}
+.banner-mnsg {
+  font-size: 1.4rem;
+
 }
 
 /*conteudo principal*/
@@ -67,6 +74,7 @@ body {
   margin: auto;
   margin-top: 0.8rem;
   display: flex;
+  border-radius: 6px;
 }
 .site-content {
   width: 70%;
@@ -91,7 +99,7 @@ body {
 .all-posts {  
   margin: 0.4rem 2px 0.4rem 2px;
   width: 31%;
-  height: 340px;
+  height: fit-content;
   min-height: fit-content;
   border-radius: 4px;
   background-color: azure;
@@ -103,36 +111,51 @@ body {
   align-items: center;
 }
 .dog-img {
+  min-height: 200px;
+  object-fit: cover;
   margin-top: 0.1rem;
   width: 97%;
   background-color: aqua;
   border-radius: 4px;
 }
 .dog-name {
+  min-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .dog-size {
+  margin-top: 0.2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: small;
 }
 .dog-description {
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
   font-size: 0.8rem;
   text-align: center;
-  height: 3rem;
+  height: 3.3rem;
 }
 .adopt-btn {
-  margin-top: 0.8rem;  
+  align-self: flex-end;
+  margin-top: 0.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.8rem; 
   border-radius: 6px;
   width: 150px;
   height: 30px;
   color: #fc8358;
-  border: 1px solid #fc8358;
+  background-color: #ffffff;
+  border: 2px solid #fc8358;
+}
+.btn-text {
+  font-weight: 900;
 }
 /*barra lateral */
 .sidebar {
   width: 30%;
-  background-color: #fde9c0;
+  background-color: #dfddd9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,7 +266,11 @@ body {
     margin: 0.4rem;
     margin-bottom: 0px;
   }
+  .footer-container {
+    height: fit-content;
+  }
   .center-footer-container {
+    margin-top: 0.8rem;
     justify-content: center;
     gap: 10px;
   }
@@ -255,16 +282,20 @@ body {
     width: 20%;
     height: 80%;
   }
+  .footer-title {
+    color: #e7e1e1;
+  }
   .footer-list-two {
     margin-top: 1.2rem;
   }
+  
   .foooter-map {    
     width: 65%;
   }
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .logo {
     display: none;
   }
@@ -292,7 +323,8 @@ body {
   }
   .all-posts {
     width: 97%;
-    height: 530px;
+    height: fit-content;
+    padding-bottom: 1.2rem;
     border-bottom: 0.8rem;
   }
   .dog-img {
