@@ -405,3 +405,8 @@ body {
     width: 90%;
   }
 }
+@media (max-width: 400px) {
+  .banner-mnsg {
+    text-align: center;    
+  }
+}
