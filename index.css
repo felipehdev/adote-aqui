@@ -11,6 +11,7 @@ body {
   background-color: #f8f8f8;
 }
 
+
 /*navbar */
 .header-container {
   background-color: #373f51;
@@ -27,10 +28,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(222, 224, 226);
+}
+.logo:hover {
+  cursor: pointer;
 }
 .emoji-logo {
   display: none;
@@ -43,9 +46,26 @@ body {
 }
 .navbar-list > li {
   list-style: none;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #e7e7e7;
+}
+.navbar-list > li:hover {
+  cursor: pointer;
+}
+.navbar-list-mobile {
+  display: none;   
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;  
+  width: 100%;
+  background-color: #c9cac8;
+  height: 50px;
+}
+.navbar-list-mobile > li {
+  color: #0f0f0f;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  flex-direction: row;  
+  height: 30px;
 }
 
 /*evento*/
@@ -61,9 +81,12 @@ body {
   margin-top: 0.8rem;
   border-radius: 6px;
 }
+.destac-banner:hover {
+  cursor: pointer;
+  zoom: 1.005;
+}
 .banner-mnsg {
   font-size: 1.4rem;
-
 }
 
 /*conteudo principal*/
@@ -118,11 +141,17 @@ body {
   background-color: aqua;
   border-radius: 4px;
 }
+.dog-img:hover {
+  cursor: pointer;
+}
 .dog-name {
   min-height: 3rem;
   text-align: center;
   text-transform: uppercase;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.dog-name:hover {
+  cursor: pointer;
 }
 .dog-size {
   margin-top: 0.2rem;
@@ -131,7 +160,7 @@ body {
 }
 .dog-description {
   margin-top: 0.8rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
   font-size: 0.8rem;
   text-align: center;
   height: 3.3rem;
@@ -148,6 +177,13 @@ body {
   color: #fc8358;
   background-color: #ffffff;
   border: 2px solid #fc8358;
+}
+.adopt-btn:hover {
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+  width: 146px;
+  box-shadow: 0.1rem 0rem 0.5rem 0.1rem #e6e4e4;
 }
 .btn-text {
   font-weight: 900;
@@ -195,6 +231,11 @@ body {
   border-radius: 4px;
   background-color: coral;
 }
+.sidebar-btn:hover {
+  cursor: pointer;
+  width: 96%;
+  box-shadow: 0.1rem 0rem 0.5rem 0.1rem #ecebeb;
+}
 /*footer*/
 .footer-container {
   display: flex; 
@@ -231,11 +272,19 @@ body {
 .footer-list-item {
   margin-top: 0.2rem;
 }
+.footer-list-item:hover {
+  cursor: pointer;
+}
 .foooter-map {
   width: 55%;
   height: 80%;  
   background-color: #c0ff8c;
+  border-radius: 6px;  
+}
+.g-maps {
   border-radius: 6px;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1440px) {
@@ -243,29 +292,72 @@ body {
     height: 80%;
   }
 }
+@media (max-width: 1024px) {
+  .navbar-container {
+    max-width: 90vw;
+    transition: 0.4s ease;
+  }
+}
 
 @media (max-width: 768px) {
   .logo {
-    margin-left: 1.6rem;
-  }
+    display: none;
+  }  
+  .emoji-logo {
+    display: flex;
+    margin: 0 auto;
+    font-size: 30px;
+  }  
   .navbar-list {
-    margin-right: 1.6rem;
+    flex-direction: row;
+    display: none;
+  }
+  .navbar-list-mobile {
+    display: flex;
   }
   .destac-banner {
     width: 95%;
   }
   .site-container {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;    
+    margin-top: 0.8rem;
     max-width: 730px;
     width: 95%;
   }
+  .disponible-title {
+    text-align: center;
+  }
+  .site-content {
+    width: 100%;
+    display: block;
+    height: fit-content;
+  }
   .all-posts {
-    height: 310px;
+    width: 97%;
+    height: fit-content;
+    padding-bottom: 1.2rem;
+    border-bottom: 0.8rem;
+  }
+  .dog-img {
+    width: 70%;
+    margin-top: 0.8rem;
   }
   .dog-description {
     margin: 0.4rem;
     margin-bottom: 0px;
   }
+
+  /*mobile sidebar*/ 
+  .sidebar {
+    width: 100%;
+    margin-top: 0.4rem;
+    border-radius: 0px 0px 6px 6px;
+    padding-bottom: 1.4rem;
+  }
+
+  /*mobile footer*/
   .footer-container {
     height: fit-content;
   }
@@ -287,53 +379,9 @@ body {
   }
   .footer-list-two {
     margin-top: 1.2rem;
-  }
-  
+  }  
   .foooter-map {    
     width: 65%;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .logo {
-    display: none;
-  }
-  .emoji-logo {
-    display: flex;
-    margin-left: 2rem;
-    margin: 0 auto;
-    font-size: 30px;
-  }
-  .navbar-list {
-    flex-direction: row;
-    display: none;
-  }
-  .site-container {
-    display: flex;
-    flex-direction: column;
-  }
-  .site-content {
-    width: 100%;
-    display: block;
-    height: fit-content;
-  }
-  .disponible-title {
-    text-align: center;
-  }
-  .all-posts {
-    width: 97%;
-    height: fit-content;
-    padding-bottom: 1.2rem;
-    border-bottom: 0.8rem;
-  }
-  .dog-img {
-    width: 70%;
-    margin-top: 0.8rem;
-  }
-  .sidebar {
-    width: 100%;
-    padding-bottom: 0.8rem;
   }
 }
 @media (max-width: 425px) {
